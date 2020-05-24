@@ -1,0 +1,34 @@
+// .button
+//   position: relative
+//   display: inline-block
+//   font-weight: 500
+//   font-size: 1.142rem
+//   padding: 24px 50px
+//   border-radius: 35px
+//   border: none
+//   color: $light
+//   text-align: center
+//   background-image: linear-gradient(to left,transparent,transparent 50%,rgba(73,137,220,.95) 50%,#00c6ff)
+//   background-position: 100% 0
+//   background-size: 200% 100%
+//   transition: all 0.3s ease-in
+//   &:hover
+//     cursor: pointer
+//     background-position: 0 0
+//   &--primary
+//     display: inline-block
+//     margin: auto
+//     margin-top: 2.5rem
+//     margin-bottom: 1rem
+//     background-color: $primary
+//     color: $light
+// .input-group
+//   position: relative
+// div.invalid
+//   color: tomato
+//   position: absolute
+//   bottom: -17px 
+//   left: 20px
+// input
+//   &.invalid
+//     border: 2px solid tomato

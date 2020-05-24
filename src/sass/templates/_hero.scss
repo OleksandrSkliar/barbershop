@@ -1,0 +1,178 @@
+// .hero
+// 	width: 100%
+// 	height: 100%
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	overflow: auto
+// 	display: flex
+// 	flex-direction: column
+// 	align-items: center
+// 	text-align: center
+// 	&__content
+// 		display: flex
+// 		flex-direction: column
+// 		align-items: center
+// 		text-align: center
+// 		margin: auto
+// 		padding-top: 90px
+// 	&__title
+// 		width: 52rem
+// 		font-weight: 700
+// 		font-size: 3.428rem
+// 		margin: auto
+// 		text-align: center
+// 	&__subtitle
+// 		font-size: 2.571rem
+// 	&__form
+// 		position: relative
+// 		text-align: center
+// 		margin-top: 2.642rem
+// 		// &:before
+// 		// 	content: ""
+// 		// 	position: absolute
+// 		// 	top: 100px
+// 		// 	left: -30px
+// 		// 	width: 68.142rem
+// 		// 	height: 5.571rem
+// 		// 	background: url("../img/outline-form.png") no-repeat
+// 		&-title
+// 			max-width: 90%
+// 			margin: 0 auto
+// 			font-size: 1.571rem
+// 			line-height: 2rem
+// 			font-weight: 300
+// 			margin-bottom: 3.214rem
+// 		&-wrapper
+// 			width: 64rem
+// 			display: flex
+// 			justify-content: space-between
+// 	&__input
+// 		width: 20.714rem
+// 		padding: 1.585rem
+// 		border: none
+// 		border-radius: 35px
+// 		&::placeholder
+// 			font-size: 0.93rem
+// 			color: #606060
+// 	&__policy
+// 		display: block
+// 		margin: auto
+// 		font-size: 1rem
+// 		font-weight: 300
+// 		text-align: center
+
+// // .hero
+// //   position: relative
+// //  display: flex
+// //   height: 100vh
+// //   padding-top: 82px
+// //   color: $light
+// //   &::after
+// //     content: ''
+// //     position: absolute
+// //     bottom: 0
+// //     left: 0
+// //     right: 0
+// //     width: 100%
+// //     height: 3.46rem
+// //     background-color: $dark
+// //   &__content
+// //     position: relative
+// //     display: flex
+// //     background: $dark url("../img/hero-bg.jpg") no-repeat center / cover
+// //     align-items: center
+// //     // justify-content: center
+// //     // flex-direction: column
+// //     width: 100%
+// //     padding-left: 4.28rem
+// //     &::before
+// //       content: ''
+// //       position: absolute
+// //       top: 0
+// //       left: 0
+// //       width: 100%
+// //       height: 100%
+// //       background: rgba($dark, 0.7)
+// //   &__title
+// //     position: relative
+// //     max-width: 500px
+// //   &__text
+// //     position: relative
+// //     font-size: 1.57rem
+// //     line-height: 132%
+// //     max-width: 500px
+// //     margin: 0
+// //     margin-top: 1rem
+// //     margin-bottom: 3.4rem
+// //   &__button
+// //     position: relative
+// //     min-width: 14.78rem
+// //     margin-right: 1.21rem
+// //     padding: 19px 24px
+// //     font-size: 0.854rem
+// //   &__instagram
+// //     max-width: 80px
+// //     height: 100%
+// //   &__scroll-down
+// //     position: absolute
+// //     display: flex
+// //     justify-content: center
+// //     align-items: center
+// //     left: -80px
+// //     bottom: 0
+// //     font-family: 'Yeseva One', 'Arial', cursive
+// //     font-style: normal
+// //     font-weight: normal
+// //     font-size: 0.86rem
+// //     // min-width: 17.7rem
+// //     // min-height: 7.3rem
+// //     padding: 30px 50px
+// //     background-color: $dark
+// //     color: $light
+// //     text-transform: uppercase
+// //     text-decoration: none
+// //     line-height: 138.6%
+// //     z-index: 3
+// //     &::after
+// //       content: ''
+// //       background: url('../img/arow-down.svg') no-repeat center
+// //       width: 29px
+// //       height: 29px
+// //       border: 1.5px solid $primary
+// //       border-radius: 50%
+// //       margin-left: 18px
+// //     &:hover
+// //       color: $primary
+// // .instagram
+// //   display: flex
+// //   justify-content: center
+// //   align-items: center
+// //   background-color: $dark
+// //   &__link
+// //     display: flex
+// //     align-items: center
+// //     text-transform: uppercase
+// //     font-size: 1.1rem
+// //     color: $primary
+// //     text-decoration: none
+// //     transform: rotate(90deg)
+// //     line-height: 0.8
+// //     &::after
+// //       content: ''
+// //       width: 50px
+// //       height: 1px
+// //       background-color: $primary
+// //       margin-left: 8px
+// //     &:hover
+// //       color: $light
+// // .title
+// //   margin: 0
+// //   font-family: 'Yeseva One', 'Arial', cursive
+// //   font-style: normal
+// //   font-weight: normal
+// //   text-transform: uppercase
+// //   font-size: 2.85rem
+// //   line-height: 1.4
+// //   &--primary
+// //     color: $primary

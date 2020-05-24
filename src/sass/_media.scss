@@ -1,0 +1,402 @@
+// @media ( min-width: 768px ) and ( max-width: 1199px )
+//   html
+//     font-size: 12px
+//   .container
+//     width: 85%
+//   .header
+//     &__contacts-wrapper
+//       &:before
+//         top: -5px 
+//   .hero
+//     &__title
+//       width: 45rem
+//       font-size: 2.7rem
+//     &__subtitle
+//       font-size: 1.7rem
+//     &__input
+//       width: 17rem
+//       padding: 1.2rem
+//       border: none
+//       border-radius: 35px
+//     &__form
+//       &-wrapper
+//         width: 54rem
+//   .button
+//     padding: 18px 40px
+//   .services
+//     &__text
+//       margin-top: 0
+//       margin-bottom: 0
+//     &__title
+//       font-size: 20px
+//     &__description
+//       font-size: 15px
+//   .section
+//     &__title 
+//       font-size: 2rem
+//       &:after
+//         width: 20rem
+//         margin-top: 1rem
+//   .operation
+//     &__title
+//       font-size: 1.5rem
+//   .team
+//     &__wrap
+//       &-img
+//         width: 200px
+//         height: 200px
+//     &__img
+//       max-width: 200px
+//       max-height: 200px
+  
+//   // .questions
+//   //   &__form
+//   //     &-wrapper
+//   //       width: 34.57rem
+//   //       display: flex
+//   //       justify-content: space-between
+//   //       flex-wrap: wrap
+//   //   &__input
+//   //     width: 13.142rem
+//   //     padding: 1.1rem
+//   //     background-color: #ffffff;
+//   //     border: none
+//   //     border-radius: 15px
+//   //     &::placeholder
+//   //       font-size: 0.93rem
+//   //       color: #606060
+//   //   &__text
+//   //     width: 34.57rem
+//   //     min-height: 6.785rem
+//   //     border: none
+//   //     border-radius: 15px
+//   //     margin-top: 2rem
+//   //     padding: 1.1rem
+//   //   &__button
+//   //     margin: 0 auto
+//   //     margin-top: 1.214rem 
+//   //   &__title
+//   //     &--light
+//   //       position: relative
+//   //       color: $light
+// @media ( min-width: 991px ) and (max-width: 1200px )
+//   .questions
+//     &__form
+//       &-title
+//         font-size: 1.5rem
+//       &-wrapper
+//         width: 45rem
+//         display: flex
+//         justify-content: space-between
+//         flex-wrap: wrap
+//     &__input
+//       width: 14.142rem
+//       padding: 1.2rem
+//     &__text
+//       width: 45rem
+//       min-height: 6.785rem
+//       padding: 1.2rem
+//   .works
+//     &__nav
+//       max-width: 55rem
+//       margin-bottom: 1rem
+//       &-link
+//         padding: 0.5rem 1.5rem
+
+// @media ( min-width: 768px ) and ( max-width: 991px )
+//   html
+//     font-size: 12px
+//   .questions
+//     &__form
+//       flex-direction: column
+//       &-title
+//         font-size: 1.5rem
+//       &-wrapper
+//         display: flex
+//         margin: auto
+//         justify-content: space-between
+//         flex-wrap: wrap
+//     &__text
+//       min-height: 6.785rem
+//       padding: 1.2rem
+//     &__input
+//       padding: 1.2rem
+//   .button
+//     padding: 15px 35px
+//   .contacts
+//     margin-right: 0
+//     &__list
+//       justify-content: space-between
+//       width: 80%
+//       flex-wrap: wrap
+//       display: flex
+//       margin: 0 auto
+//       padding-left: 60px
+//       margin-top: 2rem
+//     &__item
+//       width: 16.666rem
+//     &__text
+//       display: flex
+//       position: relative
+//       left: 0
+//       margin: auto
+//   .footer
+//     &__link
+//       padding: 0 15px
+//   .works
+//     &__nav
+//       max-width: 52rem
+//       margin-bottom: 1rem
+//       &-link
+//         padding: 0.4rem 1.2rem
+
+
+
+// @media ( min-width: 320px ) and ( max-width: 767px )
+//   html
+//     font-size: 10px
+//   .container
+//     width: 80%
+//   .section
+//     padding: 30px 0
+//     &__title 
+//       font-size: 2rem
+//       margin-bottom: 2rem
+//       &:after
+//         width: 15rem
+//         margin-top: 0.8rem
+//   .services
+//     &__title
+//       font-size: 18px
+//     &__description
+//       font-size: 15px
+//   .header
+//     &__contacts-wrapper
+//       display: none
+//     &__scroll
+//       display: none
+//   .hero
+//     &__title
+//       width: 100%
+//       font-size: 2.7rem
+//     &__subtitle
+//       font-size: 1.7rem
+//     &__input
+//       width: 100%
+//       padding: 1.2rem
+//       border: none
+//       border-radius: 35px
+//       &-group
+//         margin-bottom: 3.5rem
+//       &-group:last-of-type
+//         margin-bottom: 0
+//     &__form
+//       &-wrapper
+//         display: flex
+//         flex-direction: column
+//         width: 100%
+//     &__subtitle
+//       display: none
+//   .button
+//     padding: 14px 40px
+//   .row
+//     flex-direction: column
+//   .col
+//     &-100
+//       width: 100%
+//     &-45
+//       &--order
+//         order: 0
+//   .services
+//     &__wrapper
+//       align-items: center
+//       text-align: center
+//       flex-direction: column
+//       margin-bottom: 4rem
+//   .advantages
+//     &__list
+//       flex-direction: column
+//     &__item
+//       width: 100%
+//       &:last-of-type
+//         margin-bottom: 0
+//     &__description
+//       width: 50%
+//       margin: auto
+//       margin-top: 20px
+//   .operation
+//     &__item
+//       display: flex
+//     &__wrapper
+//       display: flex
+//       flex-direction: column
+//       margin-bottom: 2rem
+//       &:last-of-type
+//         margin-bottom: 0
+//     &__title
+//       font-size: 1.8rem
+//       margin-bottom: 0
+//     &__text
+//       text-align: center
+//       position: relative
+//     &--order
+//       order: 1
+//   .team
+//     &__list
+//       display: flex
+//       flex-direction: column
+//       align-items: center
+//       &--disable
+//         display: none
+//     &__item
+//       margin-bottom: 2rem
+//     &__headmaster
+//       margin-top: 0
+//       &:before
+//         display: none
+//       &:after
+//         display: none
+//   .blog
+//     &__content
+//       flex-direction: column
+//       align-items: center
+//       &-wrap
+//         margin-bottom: 3rem
+//         &:last-of-type
+//           margin-bottom: 0
+//     &__img
+//       order: 1
+//     &__link
+//       &-text
+//         margin-top: 0
+//         margin-bottom: 1rem
+//   .questions
+//     &__form
+//       flex-direction: column
+//       &-title
+//         font-size: 1.5rem
+//       &-wrapper
+//         width: 100%
+//         margin: auto
+//         flex-wrap: nowrap
+//         flex-direction: column
+//     &__text
+//       width: 100%
+//       min-height: 5.785rem
+//       padding: 1.2rem
+//       margin-top: 0
+//     &__input
+//       width: 100%
+//       padding: 1.2rem
+//       &-group
+//         margin-bottom: 3rem
+//     &__button
+//       margin-top: 0
+//       padding: 14px 40px
+//   .contacts
+//     margin-right: 0
+//     &__list
+//       justify-content: space-between
+//       width: 80%
+//       flex-wrap: wrap
+//       display: flex
+//       margin: 0 auto
+//       margin-top: 2rem
+//     &__item
+//       width: 16.666rem
+//     &__text
+//       display: flex
+//       position: relative
+//       left: 0
+//       margin: auto
+//   .social
+//     &__img
+//       width: 10px
+//       height: 10px
+//     &__link
+//       padding: 3px
+//   .footer
+//     &__wrapper
+//       display: flex
+//       justify-content: space-between
+//       align-items: center
+//       padding-top: 2.928rem
+//       padding-bottom: 4.357rem
+//     &__list
+//       display: flex
+//       flex-wrap: wrap
+//       flex-direction: column
+//     &__item
+//       margin-bottom: 1rem
+//       &:last-of-type
+//         margin-bottom: 0
+//     &__link
+//       padding: 0 10px
+//   .slick
+//     &-track
+//       justify-content: center
+//       text-align: center
+//       align-items: flex-start
+//   .slider
+//     &__range
+//       margin-top: 1.5rem
+//   .works
+//     &__nav
+//       flex-direction: column
+//       margin-bottom: 0
+//     &__nav-link
+//       line-height: 2.2rem
+//       width: 100%
+//       margin: auto
+//       text-align: center
+//       padding: 0.5rem 1.2rem
+//       margin-bottom: 1rem
+//   .portfolio
+//     flex-direction: column
+//     align-items: center
+//   .menu
+//     &__link
+//       width: 32px
+//       height: 32px
+//       span, span:before, span:after
+//         display: block
+//         position: absolute
+//         left: 50%
+//         margin-left: -10px
+//         top: 50%
+//         width: 20px
+//       span:before
+//         content: ""
+//         margin-top: -6px
+//         transition: all 0.2s
+//       span:after
+//         content: ""
+//         margin-top: 4px
+//         transition: all 0.2s
+//       &--active span
+//         background-color: transparent
+//         &:before
+//           transform: rotate(135deg)
+//           margin: 0
+//           left: 0
+//           margin-top: 0
+//         &:after
+//           transform: rotate(-135deg)
+//           margin: 0
+//           left: 0
+//           margin-top: 0
+//   .mapa
+//     overflow: hidden
+//     height: 350px
+
+
+// @media ( min-width: 320px ) and ( max-width: 375px )
+//   .team
+//     &__wrap
+//       &-img
+//         width: 150px
+//         height: 150px
+//     &__img
+//       max-width: 150px
+//       max-height: 150px
+
