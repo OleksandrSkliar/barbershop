@@ -1,20 +1,28 @@
-// .button
-//   position: relative
-//   display: inline-block
-//   font-weight: 500
-//   font-size: 1.142rem
-//   padding: 24px 50px
-//   border-radius: 35px
-//   border: none
-//   color: $light
-//   text-align: center
-//   background-image: linear-gradient(to left,transparent,transparent 50%,rgba(73,137,220,.95) 50%,#00c6ff)
-//   background-position: 100% 0
-//   background-size: 200% 100%
-//   transition: all 0.3s ease-in
-//   &:hover
-//     cursor: pointer
-//     background-position: 0 0
+.button {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  // font-size: 20px;
+  padding: 20px 72px;
+  border-radius: 28px;
+  background-color: transparent;
+  border: 2px solid $primary;
+  color: $primary;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $light;
+    background-color: $primary;
+  }
+
+  // &:hover {
+  //   color: $light;
+  //   border: none;
+  //   background-color: &primary;
+  //   cursor: pointer;
+  // }
+}
+
 //   &--primary
 //     display: inline-block
 //     margin: auto
