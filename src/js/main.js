@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Бургер меню
   var menu = $(".menu__link");
   var menu_active = $(".menu__link--active");
   var filter = $("[data-filter]");
@@ -13,6 +14,18 @@ $(document).ready(function () {
     menu.toggleClass("menu__link--active");
     menu_list.toggleClass("menu__wrap--active");
   });
+  
+  //ПРИМЕНЕНИЕ КЛАССА "IBG"
+  function ibg(){
+
+    $.each($('.ibg'), function(index, val) {
+      if($(this).find('img').length>0){
+        $(this).css('background-image','url("'+$(this).find('img').attr('src')+'")');
+      }
+    });
+  }
+
+  ibg();
 
   //Фильтр по категорям
   filter.click(function (event) {
@@ -160,12 +173,11 @@ $(document).ready(function () {
   $('a[href*="#"]').on("click", function (e) {
     e.preventDefault();
 
-    $("html, body").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top,
-      },
-      500,
-      "linear"
+    $("html, body").animate({
+      scrollTop: $($(this).attr("href")).offset().top,
+    },
+    500,
+    "linear"
     );
   });
 
@@ -190,25 +202,24 @@ $(document).ready(function () {
     adaptiveHeight: true,
     infinite: true,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4,
-        },
+    responsive: [{
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 4,
       },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-        },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
       },
-      {
-        breakpoint: 540,
-        settings: {
-          slidesToShow: 1,
-        },
+    },
+    {
+      breakpoint: 540,
+      settings: {
+        slidesToShow: 1,
       },
+    },
     ],
   });
 
@@ -220,7 +231,7 @@ $(document).ready(function () {
     if (windowTop > mapTop) {
       $("#map").html(
         '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.6268769568396!2d30.50596958178937!3d50.50547388174691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d2191284c34b%3A0xa5b48ecd02686b1c!2z0L_RgNC-0YHQvy4g0JPQtdGA0L7QtdCyINCh0YLQsNC70LjQvdCz0YDQsNC00LAsINCa0LjQtdCyLCDQo9C60YDQsNC40L3QsCwgMDIwMDA!5e0!3m2!1sru!2spl!4v1589474930559!5m2!1sru!2spl" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
-      );
+        );
       $(window).unbind("scroll");
     }
   });

@@ -4,18 +4,17 @@
   margin: auto;
 }
 
-// .row
-//   display: flex
-//   flex-wrap: wrap
-// .col
-//   &-45
-//     width: 45%
-//     display: flex
-//     align-items: center
-//     height: 100%
-//     justify-content: center
-//     &--order
-//       order: 1
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col-25 {
+    width: 260px;
+    text-align: left;
+    align-items: center;
+    height: 100%;
+}
 //   &-50
 //     width: 50%
 //     position: relative

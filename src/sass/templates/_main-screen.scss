@@ -1,12 +1,13 @@
-.hero {
+.main-screen {
+  flex: 1 0 100%;
   position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url('../img/hero-bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -1px;
+  }
   &__content {
     position: absolute;
     top: 50%;
@@ -14,38 +15,27 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
   }
-
+  &__content-img {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+  }
   &__title {
     display: block;
     // font-size: 90px;
     font-weight: 700;
     color: $light;
     font-size: calc(40px + 50 * (100vw / 1920));
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      left: -100px;
-      display: flex;
-      background-repeat: no-repeat;
-      height: 434px;
-      width: 770px;
-      background: url('../img/rectangle.png');
-    }
   }
-
   &__subtitle-top {
     display: block;
     // font-size: 50px;
     font-size: calc(20px + 30 * (100vw / 1920));
   }
-
   &__subtitle-bottom {
     display: block;
     // font-size: 30px;
     font-size: calc(16px + 14 * (100vw / 1920));
-    font-weight: 400;
   }
 }
 

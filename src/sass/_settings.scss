@@ -28,6 +28,50 @@ ul {
   margin: 0;
 }
 
+.page {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.ibg{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img{
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.section {
+  text-align: center;
+  padding: 110px 0;
+  &__title {
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dark;
+  }
+  &__subtitle {
+    font-size: 20px;
+    line-height: 46px;
+    color: $black;
+  }
+}
+
 // .mapa
 //   filter: grayscale(50%)
 
