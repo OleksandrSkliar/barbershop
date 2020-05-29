@@ -1,9 +1,5 @@
 .advantage {
 	position: relative;
-	&__row {
-		margin-top: 60px;
-	}
-
 	&__description {
 		// font-size: 18px;
 		font-size: calc(16px + 2 * (100vw / 1920));

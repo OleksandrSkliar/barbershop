@@ -1,7 +1,13 @@
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   body {
     font-size: calc(14px + (6 + 6 * 0.7) * ((100vw - 320px) / 1920));
   }
+
+  .slider {
+	  &__item {
+	    opacity: 0.8;
+  	}
+	}
 }
 
 // @media ( min-width: 768px ) and ( max-width: 1199px )

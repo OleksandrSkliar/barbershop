@@ -30,8 +30,51 @@ $(document).ready(function () {
   //слайдер
   $('.slider').slick({
     centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 2500,
+        settings: {
+          centerMode: true,
+          variableWidth: true,
+          infinite: true,
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 1800,
+        settings: {
+          centerMode: true,
+          variableWidth: false,
+          infinite: true,
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          centerMode: false,
+          variableWidth: false,
+          infinite: true,
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: false,
+          infinite: true,
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: false,
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   //Фильтр по категорям
