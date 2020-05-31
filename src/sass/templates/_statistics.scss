@@ -1,0 +1,17 @@
+.statistics {
+	background: $dark;
+	&__title {
+		font-size: 40px;
+		line-height: 46px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $primary;
+		margin-bottom: 15px;
+	}
+
+	&__subtitle {
+		font-size: 20px;
+		line-height: 46px;
+		color: $light;
+	}
+}

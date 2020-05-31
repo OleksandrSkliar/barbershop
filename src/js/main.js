@@ -77,6 +77,52 @@ $(document).ready(function () {
     ]
   });
 
+  //слайдер 2
+  $('.news__slider').slick({
+    slidesToShow: 4,
+    infinite: true,
+    centerMode: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          centerMode: false,
+          variableWidth: false,
+          infinite: true,
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: false,
+          infinite: true,
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: false,
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+   // загрузка карты при скроле
+  var map = $(".statistics");
+  var mapTop = map.offset().top;
+  $(window).bind("scroll", function () {
+    var windowTop = $(this).scrollTop();
+    if (windowTop > mapTop) {
+      $("#map").html(
+        '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab245e42e0be839d9f2aeab1fe427ef33f365bce1b5ddb8711fb172809e11cf35&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>'
+        );
+      $(window).unbind("scroll");
+    }
+  });
+
   //Фильтр по категорям
   filter.click(function (event) {
     event.preventDefault();
@@ -271,19 +317,6 @@ $(document).ready(function () {
       },
     },
     ],
-  });
-
-  // загрузка карты при скроле
-  var map = $(".blog");
-  var mapTop = map.offset().top;
-  $(window).bind("scroll", function () {
-    var windowTop = $(this).scrollTop();
-    if (windowTop > mapTop) {
-      $("#map").html(
-        '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.6268769568396!2d30.50596958178937!3d50.50547388174691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d2191284c34b%3A0xa5b48ecd02686b1c!2z0L_RgNC-0YHQvy4g0JPQtdGA0L7QtdCyINCh0YLQsNC70LjQvdCz0YDQsNC00LAsINCa0LjQtdCyLCDQo9C60YDQsNC40L3QsCwgMDIwMDA!5e0!3m2!1sru!2spl!4v1589474930559!5m2!1sru!2spl" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
-        );
-      $(window).unbind("scroll");
-    }
   });
 
   // Zoom image
