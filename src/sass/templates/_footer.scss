@@ -1,3 +1,59 @@
 .footer {
-	
+	&__map {
+  filter: brightness(90%);
+	}
+	&__map-wrap {
+		position: relative;
+	}
+
+	&__content {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		color: $light;
+		text-align: center;
+		padding: 80px 90px 70px 90px;
+		font-size: 24px;
+		line-height: 36px;
+		opacity: 0.8;
+		background-color: #333333;
+		top: 15%;
+		left: 50%
+	}
+	&__street {
+		margin-top: 40px;
+	}
+	&__phone {
+		color: $light;
+		margin-bottom: 10px;
+	}
+	&__way {
+		text-decoration: underline;
+		color: $primary;
+		margin-bottom: 35px;
+	}
+	&__bottom {
+		padding-top: 45px;
+		padding-bottom: 35px;
+		background-color: $dark;
+	}
+	&__bottom-content {
+		display: flex;
+		justify-content: space-between;
+		font-size: 20px;
+		line-height: 46px;
+	}
+	&__bottom-text {
+		color: $light;
+	}
+	&__bottom-policy {
+		color: #808080;
+	}
+	&__bottom-designer {
+		margin: 0;
+		color: #808080;
+	}
+	&__link-designer {
+		color: #808080;
+	}
 }

@@ -48,6 +48,15 @@
   right: -7px;
   background: url('../img/arrow-black-right.svg') 0 0 / 100% no-repeat;
 }
+
+/* Стрелка влево */
+.news__slider .slick-arrow.slick-prev:hover{
+  background: url('../img/arrow-hover-left.svg') 0 0 / 100% no-repeat;
+}
+/* Стрелка вправо */
+.news__slider .slick-arrow.slick-next:hover{
+  background: url('../img/arrow-hover-right.svg') 0 0 / 100% no-repeat;
+}
 /* Стрелка не активная */
 .slick-arrow.slick-disabled{}
 /* Точки (булиты) */
