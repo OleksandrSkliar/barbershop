@@ -35,17 +35,17 @@
                       >
                     </li>
                     <li class="menu__item">
-                      <a href="#works" class="menu__list-link menu--hover"
+                      <a href="#price" class="menu__list-link menu--hover"
                       >Услуги и цены
                     </a>
                     </li>
                     <li class="menu__item">
-                      <a href="#advantages" class="menu__list-link menu--hover"
+                      <a href="#news" class="menu__list-link menu--hover"
                       >Новости
                       </a>
                     </li>
                     <li class="menu__item">
-                      <a href="#operation" class="menu__list-link menu--hover"
+                      <a href="#contacts" class="menu__list-link menu--hover"
                       >Контакты
                       </a>
                     </li>
@@ -76,7 +76,7 @@
       </div>
       <main class="main">
         <div class="container">
-          <section class="section advantage">
+          <section class="section advantage" id="services">
             <h2 class="section__title">
               Больше, чем парикмахерская для мужчин
             </h2>
@@ -132,7 +132,7 @@
               <img data-lazy="img/advantages-img-1.jpg" alt="slider" class="slider__img">
             </div>
           </div>
-          <section class="section price">
+          <section class="section price" id="price">
             <div class="container">
             <h2 class="section__title">
               Приходите в гости - мы рады видеть каждого
@@ -201,7 +201,7 @@
             </div>
           </div>
         </section>
-        <section class="section news">
+        <section class="section news" id="news">
           <div class="container">
             <h2 class="section__title">
               будьте в курсе первыми
@@ -255,14 +255,14 @@
         <div class="footer__map-wrap">
           <div class="footer__map" id="map">
           </div>
-          <div class="footer__content">
+          <div class="footer__content" id="contacts">
             <a href="#" class="footer__logo">
               <img class="logo" src="img/logo.png" alt="logo">
             </a>
             <span class="footer__street">г. Ярославль, ул. Чайковского, 40</span>
             <a href="tel:+74852609083" class="footer__phone">+7(4852)60-90-83</a>
             <a href="#" class="footer__way">Как добраться?</a>
-            <span class="footer__schedule">Ежедневно с 1000 до 2100</span>
+            <span class="footer__schedule">Ежедневно с 10:00 до 21:00</span>
           </div>
         </div>
         <div class="footer__bottom">
@@ -277,6 +277,58 @@
           </div>
         </div>
       </footer>
+      <div class="modal">
+        <div class="modal__dialog">
+          <button class="modal__close"></button>
+          <h3 class="modal__title">
+            Online Запись
+          </h3>
+          <span class="modal__subtitle">
+            Запишитесь на стрижку или бритье и поучите чашечку ароматного кофе!
+          </span>
+          <form action="telegram.php" method="POST" class="form modal__form">
+            <div class="input-group modal__input-group">
+              <label for="user-name" class="label form__label label--light"></label>
+              <input type="text" class="input form__input modal__input input--light" name="userName" id="user-name" placeholder="Имя:" />
+            </div>
+            <div class="input-group modal__input-group">
+              <label for="user-phone" class="label form__label label--light"></label>
+              <input type="tel" class="input form__input modal__input input--light" name="userPhone" id="user-phone" placeholder="Телефон:" />
+            </div>
+            <div class="input-group modal__input-group">
+              <label for="user-date" class="label form__label label--light"></label>
+              <input type="date" value="Дата" class="input form__input modal__input input--light" name="userDate" id="user-date" placeholder="Дата" />
+            </div>
+            <div class="input-group modal__input-group">
+              <label for="user-time" class="label form__label label--light"></label>
+              <input type="time" class="input form__input modal__input input--light" name="userTime" id="user-time" placeholder="Время" />
+            </div>
+            <div class="policy modal__policy">
+              <input class="policy__checkbox" type="checkbox" name="userCheckbox" id="policy-checkbox-3"/>
+              <label class="policy__label" for="policy-checkbox-3">Я соглашаюсь на обработку данных</label>
+            </div>
+            <!-- /.policy -->
+            <button class="modal__button button">Online-запись</button>
+          </form>
+          <!-- /.form modal__form -->
+        </div>
+        <!-- /.modal__dialog -->
+      </div>
+      <!-- /.modal -->
+  <!-- <div class="modal-answer">
+    <div class="modal-answer__dialog">
+      <button class="modal-answer__close"></button>
+      <p class="modal-answer__title">Спасибо! Заявка успешно отправлена. Наш менеджер перезвонит Вам в течение 15 минут.
+        <div class="modal-answer__social">
+          <p class="modal-answer__social-text">
+            Чтобы узнавать новости первыми, подпишитесь на нашу группу в ВК
+          </p>
+          <a class="modal-answer__social-link" href="#" target="_blank">Подписаться
+            <img class="modal-answer__social-img" src="img/vk.svg" width="20" height="20" alt="vk">
+          </a>
+        </div>
+    </div>
+  </div> -->
     </div>
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>

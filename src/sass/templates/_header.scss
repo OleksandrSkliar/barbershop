@@ -16,6 +16,9 @@
     font-weight: 400;
     line-height: 46px;
     color: $light;
+    &:hover {
+      color: $primary;
+    }
   }
 }
 

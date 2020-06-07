@@ -14,6 +14,27 @@ $(document).ready(function () {
     menu.toggleClass("menu__link--active");
     menu_list.toggleClass("menu__wrap--active");
   });
+
+  // плавная прокрутка 
+  $(function () {
+      $('a[href^="#"]').on('click', function (event) {
+          // отменяем стандартное действие
+          event.preventDefault();
+
+          var sc = $(this).attr("href"),
+              dn = $(sc).offset().top;
+          /*
+           * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+           * dn - определяем положение блока на странице
+           */
+          $('html, body').animate({
+              scrollTop: dn
+          }, 1000);
+          /*
+           * 1000 скорость перехода в миллисекундах
+           */
+      });
+  });
   
   //ПРИМЕНЕНИЕ КЛАССА "IBG"
   function ibg(){
@@ -120,27 +141,6 @@ $(document).ready(function () {
         '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab245e42e0be839d9f2aeab1fe427ef33f365bce1b5ddb8711fb172809e11cf35&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>'
         );
       $(window).unbind("scroll");
-    }
-  });
-
-  //Фильтр по категорям
-  filter.click(function (event) {
-    event.preventDefault();
-    $(".works__nav-link").removeClass("active");
-    $(this).addClass("active");
-
-    var cat = $(this).data("filter");
-    if (cat == "all") {
-      $("[data-cat]").removeClass("hide");
-    } else {
-      $("[data-cat]").each(function () {
-        var workCat = $(this).data("cat");
-        if (workCat != cat) {
-          $(this).addClass("hide");
-        } else {
-          $(this).removeClass("hide");
-        }
-      });
     }
   });
 

@@ -27,11 +27,18 @@
 	&__phone {
 		color: $light;
 		margin-bottom: 10px;
+		&:hover {
+			color: $primary;
+		}
 	}
 	&__way {
 		text-decoration: underline;
 		color: $primary;
 		margin-bottom: 35px;
+		&:hover {
+			color: $light;
+		}
+		
 	}
 	&__bottom {
 		padding-top: 45px;
@@ -50,6 +57,9 @@
 	}
 	&__bottom-policy {
 		color: #808080;
+		&:hover {
+			color: $light;
+		}
 	}
 	&__bottom-designer {
 		margin: 0;
@@ -57,5 +67,8 @@
 	}
 	&__link-designer {
 		color: #808080;
+		&:hover {
+			color: $light;
+		}
 	}
 }
