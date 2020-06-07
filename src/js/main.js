@@ -53,7 +53,7 @@ $(document).ready(function () {
       {
         breakpoint: 992,
         settings: {
-          centerMode: false,
+          centerMode: true,
           variableWidth: false,
           infinite: true,
           slidesToShow: 3
@@ -111,7 +111,7 @@ $(document).ready(function () {
   });
 
    // загрузка карты при скроле
-  var map = $(".statistics");
+  var map = $(".price");
   var mapTop = map.offset().top;
   $(window).bind("scroll", function () {
     var windowTop = $(this).scrollTop();

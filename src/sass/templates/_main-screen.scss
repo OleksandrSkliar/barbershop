@@ -25,17 +25,17 @@
     // font-size: 90px;
     font-weight: 700;
     color: $light;
-    font-size: calc(40px + 50 * (100vw / 1920));
+    font-size: calc(10px + 80 * (100vw / 1920));
   }
   &__subtitle-top {
     display: block;
     // font-size: 50px;
-    font-size: calc(20px + 30 * (100vw / 1920));
+    font-size: calc(12px + 38 * (100vw / 1920));
   }
   &__subtitle-bottom {
     display: block;
     // font-size: 30px;
-    font-size: calc(16px + 14 * (100vw / 1920));
+    font-size: calc(10px + 20 * (100vw / 1920));
   }
 }
 

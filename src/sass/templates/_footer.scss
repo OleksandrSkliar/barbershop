@@ -13,7 +13,8 @@
 		color: $light;
 		text-align: center;
 		padding: 80px 90px 70px 90px;
-		font-size: 24px;
+		// font-size: 24px;
+		font-size: calc(14px + 10 * (100vw / 1920));
 		line-height: 36px;
 		opacity: 0.8;
 		background-color: #333333;
@@ -40,7 +41,8 @@
 	&__bottom-content {
 		display: flex;
 		justify-content: space-between;
-		font-size: 20px;
+		// font-size: 20px;
+		font-size: calc(14px + 6 * (100vw / 1920));
 		line-height: 46px;
 	}
 	&__bottom-text {

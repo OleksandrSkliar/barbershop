@@ -15,12 +15,10 @@
     background-color: $primary;
   }
 
-  // &:hover {
-  //   color: $light;
-  //   border: none;
-  //   background-color: &primary;
-  //   cursor: pointer;
-  // }
+  &--hidden {
+    display: none;
+    
+  }
 }
 
 //   &--primary

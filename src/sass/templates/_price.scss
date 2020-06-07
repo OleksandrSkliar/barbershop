@@ -19,23 +19,25 @@
 
 	&__title {
 		margin: 0;
-		font-size: 22px;
+		// font-size: 22px;
+		font-size: calc(16px + 6 * (100vw / 1920));
 		line-height: 30px;
 		font-weight: 700;
 		text-transform: uppercase;
 		color: #2a2a2a;
-		margin-bottom: 10px;
 	}
 
 	&__subtitle {
 		margin: 0;
-		font-size: 18px;
+		// font-size: 18px;
+		font-size: calc(12px + 6 * (100vw / 1920));
 		text-transform: none;
 		color: #a3a3a3;
 	}
 
 	&__cost {
-		font-size: 22px;
+		// font-size: 22px;
+		font-size: calc(16px + 6 * (100vw / 1920));
 		line-height: 30px;
 		font-weight: 700;
 		text-transform: uppercase;
