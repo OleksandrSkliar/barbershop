@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  var modal = $(".modal"),
+        modalAnswer = $('.modal-answer'),
+        modalBtn = $("[data-togle=modal]"),
+        modalClose = $(".modal__close"),
+        closeBtnAnswer = $('.modal-answer__close');
+    modalBtn.on("click", function () {
+        modal.toggleClass("modal--visible");
+    });
+    modalClose.on("click", function () {
+        modal.toggleClass("modal--visible");
+    });
+    closeBtnAnswer.on('click', function () {
+        modalAnswer.toggleClass('modal-answer--visible');
+    });
   // Бургер меню
   var menu = $(".menu__link");
   var menu_active = $(".menu__link--active");
@@ -13,6 +27,20 @@ $(document).ready(function () {
   nav_link.click(function () {
     menu.toggleClass("menu__link--active");
     menu_list.toggleClass("menu__wrap--active");
+  });
+
+ // закрытие модального окна нажатием на кнопку Esc
+  $(document).keydown(function (e) {
+      if (e.code == 'Escape') {
+          modal.removeClass('modal--visible');
+          modalAnswer.removeClass('modal-answer--visible');
+      };
+  });
+  // закрытие модального окна при нажатие на любое место вне его
+  $(document).on('click', function (e) {
+      if (modal.is(e.target)) {
+          modal.removeClass('modal--visible');
+      };
   });
 
   // плавная прокрутка 
@@ -145,7 +173,7 @@ $(document).ready(function () {
   });
 
   // Валидация формы
-  function validateFormHero(form) {
+  function validateForm(form) {
     $(form).validate({
       errorClass: "invalid",
       errorElement: "div",
@@ -161,24 +189,32 @@ $(document).ready(function () {
           minlength: 17,
         },
         // compound rule
-        userEmail: {
+        userDate: {
           required: true,
-          email: true,
         },
+        userTime: {
+          required: true,
+        },
+        userCheckbox: "required",
       },
       messages: {
         userName: {
-          required: "Заполните поле Имя",
+          required: "Введите Имя",
           minlength: "Слишком короткое имя",
           maxlength: "Имя не должно превышать 15 символов",
         },
         userPhone: {
-          required: "Заполните поле Телефон",
+          required: "Введите Телефон",
           minlength: "Некорректно введен номер",
         },
-        userEmail: {
-          required: "Заполните поле Email",
-          email: "Формат name@domain.com",
+        userDate: {
+          required: "Выберите Дату",
+        },
+        userTime: {
+          required: "Выберите Время",
+        },
+        userCheckbox: {
+          required: "Подтвердить обработку",
         },
       },
       submitHandler: function (form) {
@@ -200,69 +236,11 @@ $(document).ready(function () {
     });
   }
 
-  function validateFormQuestions(form) {
-    $(form).validate({
-      errorClass: "invalid",
-      errorElement: "div",
-      rules: {
-        // simple rule, converted to {required:true}
-        userName: {
-          required: true,
-          minlength: 2,
-          maxlength: 15,
-        },
-        userPhone: {
-          required: true,
-          minlength: 17,
-        },
-        userQuestion: "required",
-        // compound rule
-        userEmail: {
-          required: true,
-          email: true,
-        },
-      },
-      messages: {
-        userName: {
-          required: "Заполните поле Имя",
-          minlength: "Слишком короткое имя",
-          maxlength: "Имя не должно превышать 15 символов",
-        },
-        userPhone: {
-          required: "Заполните поле Телефон",
-          minlength: "Некорректно введен номер",
-        },
-        userQuestion: "Заполните поле Вопрос",
-        userEmail: {
-          required: "Заполните поле Email",
-          email: "Формат name@domain.com",
-        },
-      },
-      submitHandler: function (form) {
-        $.ajax({
-          type: "POST",
-          url: "send.php",
-          data: $(form).serialize(),
-          success: function (response) {
-            console.log("Ajax сработал. Oтвет сервера: " + response);
-            alert("Форма отправлена, мы свяжимся с вами в течение 15 минут");
-            $(form)[0].reset();
-            $(form).find("input").val("");
-          },
-          error: function (response) {
-            console.error("Ошибка запроса" + response);
-          },
-        });
-      },
-    });
-  }
-
-  validateFormHero(".hero__form");
-  validateFormQuestions(".questions__form");
+  validateForm(".modal__form");
 
   // Маска для телефона
   $("[type=tel]").mask("+380 (00) 000-00-00", {
-    placeholder: "Номер телефона",
+    placeholder: "Телефон",
   });
 
   // Cкрол вниз

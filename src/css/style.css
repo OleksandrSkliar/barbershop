@@ -3623,6 +3623,8 @@ ul {
     color: #ffffff; }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3648,33 +3650,51 @@ ul {
     opacity: 1;
     visibility: visible; }
   .modal__dialog {
-    position: relative;
+    position: fixed;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: scroll;
+    max-height: 100%;
     text-align: center;
-    max-width: 36.36rem;
+    max-width: 34rem;
     background: #ffffff;
     padding: 100px;
-    color: #333333;
+    color: #1f1f1f;
     border: 10px solid #bb8e62; }
   .modal__close {
     position: absolute;
     right: 0;
     top: 0;
-    width: 28px;
-    height: 28px;
-    background: transparent url("../img/close.svg") no-repeat center;
+    width: 35px;
+    height: 35px;
+    background: transparent url("../img/close-form.svg") no-repeat center;
     border: none;
-    margin: 12px;
+    margin: 20px;
     cursor: pointer; }
   .modal__title {
-    font-family: 'Yeseva One', 'Arial', cursive;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.37rem;
-    line-height: 1.857rem;
-    font-weight: normal;
+    font-size: calc(15px + 21 * (100vw / 1920));
+    line-height: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1f1f1f;
     text-align: center;
     margin: 0;
-    margin-bottom: 2.428rem; }
+    margin-bottom: 30px; }
+  .modal__subtitle {
+    font-size: calc(14px + 4 * (100vw / 1920));
+    line-height: 28px;
+    color: #1f1f1f; }
   .modal__form {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3684,7 +3704,8 @@ ul {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 100%; }
   .modal__input-group {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3696,43 +3717,39 @@ ul {
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-    margin-bottom: 3.428rem; }
+    margin-top: 60px; }
   .modal__policy {
-    margin-bottom: 2.78rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
     position: relative; }
 
 .input {
-  font-size: 1.285rem;
+  font-size: calc(14px + 4 * (100vw / 1920));
   background: transparent;
   border: none;
   text-align: center;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
-  color: #333333;
+  color: #1f1f1f;
   padding: 0.57rem 0; }
   .input--light::-webkit-input-placeholder {
-    font-family: 'Futura Medium', 'Arial', sans-serif;
-    font-size: 1.285rem;
-    line-height: 1.785rem;
+    font-size: calc(14px + 4 * (100vw / 1920));
+    line-height: 40px;
     color: #b5b5b5; }
   .input--light::-moz-placeholder {
-    font-family: 'Futura Medium', 'Arial', sans-serif;
-    font-size: 1.285rem;
-    line-height: 1.785rem;
+    font-size: calc(14px + 4 * (100vw / 1920));
+    line-height: 40px;
     color: #b5b5b5; }
   .input--light:-ms-input-placeholder {
-    font-family: 'Futura Medium', 'Arial', sans-serif;
-    font-size: 1.285rem;
-    line-height: 1.785rem;
+    font-size: calc(14px + 4 * (100vw / 1920));
+    line-height: 40px;
     color: #b5b5b5; }
   .input--light::-ms-input-placeholder {
-    font-family: 'Futura Medium', 'Arial', sans-serif;
-    font-size: 1.285rem;
-    line-height: 1.785rem;
+    font-size: calc(14px + 4 * (100vw / 1920));
+    line-height: 40px;
     color: #b5b5b5; }
   .input--light::placeholder {
-    font-family: 'Futura Medium', 'Arial', sans-serif;
-    font-size: 1.285rem;
-    line-height: 1.785rem;
+    font-size: calc(14px + 4 * (100vw / 1920));
+    line-height: 40px;
     color: #b5b5b5; }
 
 .policy__checkbox {
@@ -3740,7 +3757,7 @@ ul {
   visibility: hidden;
   position: absolute; }
   .policy__checkbox:checked ~ .policy__label::before {
-    background: #bb8e62 url("../img/check.svg") no-repeat center/0.8rem; }
+    background: url("../img/checkboxs.svg") no-repeat center/0.8rem; }
 
 .policy__label {
   display: -webkit-box;
@@ -3751,7 +3768,13 @@ ul {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 1.143rem; }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: calc(12px + 2 * (100vw / 1920));
+  line-height: 20px;
+  color: #323232; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -3766,6 +3789,19 @@ ul {
     -ms-flex-pack: center;
     justify-content: center; }
 
+div.invalid {
+  color: #d71414;
+  font-size: calc(12px + 2 * (100vw / 1920));
+  position: absolute;
+  left: 0;
+  bottom: -20px; }
+
+input.invalid {
+  border-bottom: 1px solid #d71414; }
+
+div#userCheckbox-error {
+  left: 25%; }
+
 @media (max-width: 1200px) {
   .button {
     padding: 15px 50px; }
@@ -3777,7 +3813,14 @@ ul {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%; } }
+    left: 50%; }
+  .modal__dialog {
+    max-width: 30rem;
+    padding: 70px; }
+  .modal__input-group {
+    margin-top: 40px; }
+  .modal__title {
+    margin-bottom: 20px; } }
 
 @media (max-width: 1100px) and (min-width: 992px) {
   .col-23 {
@@ -3835,7 +3878,17 @@ ul {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%; } }
+    left: 50%; }
+  .modal__dialog {
+    max-width: 27rem;
+    padding: 60px; }
+  .modal__input-group {
+    margin-top: 30px; }
+  .modal__title {
+    margin-bottom: 15px; }
+  .modal__policy {
+    margin-top: 40px;
+    margin-bottom: 40px; } }
 
 @media (max-width: 768px) {
   body {
@@ -3919,10 +3972,25 @@ ul {
     .footer__map-wrap {
       height: 450px; }
   .footer .ymaps-2-1-76-map {
-    max-height: 450px; } }
+    max-height: 450px; }
+  .modal__policy {
+    margin-top: 40px;
+    margin-bottom: 25px; } }
 
 @media (max-width: 460px) {
   .logo {
     max-width: 220px; }
   .menu__link {
-    top: 35px; } }
+    top: 35px; }
+  .modal__dialog {
+    max-width: 23rem;
+    padding: 20px; }
+  .modal__input-group {
+    margin-top: 20px; }
+  .modal__title {
+    margin-bottom: 10px; }
+  .modal__policy {
+    margin-top: 30px;
+    margin-bottom: 15px; }
+  .modal__close {
+    margin: 5px; } }

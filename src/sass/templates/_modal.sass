@@ -1,6 +1,6 @@
 .modal
-  // opacity: 0
-  // visibility: hidden
+  opacity: 0
+  visibility: hidden
   display: flex
   align-items: center
   justify-content: center
@@ -17,62 +17,74 @@
     opacity: 1
     visibility: visible
   &__dialog
-    position: relative
+    position: fixed
+    display: flex
+    flex-direction: column
+    align-items: center
+    overflow: scroll
+    max-height: 100%
     text-align: center
-    
-    max-width: 36.36rem
+    max-width: 34rem
     background: $light
     padding: 100px
-    color: $dark
+    color: $dark-form
     border: 10px solid $primary
   &__close
     position: absolute
     right: 0
     top: 0
-    width: 28px
-    height: 28px
-    background: transparent url("../img/close.svg") no-repeat center
+    width: 35px
+    height: 35px
+    background: transparent url("../img/close-form.svg") no-repeat center
     border: none
-    margin: 12px
+    margin: 20px
     cursor: pointer
   &__title
-    font-family: 'Yeseva One', 'Arial', cursive
-    font-style: normal
-    font-weight: normal
-    font-size: 1.37rem
-    line-height: 1.857rem
-    font-weight: normal
+    // font-size: 36px
+    font-size: calc(15px + 21 * (100vw / 1920))
+    line-height: 42px
+    font-weight: 700
+    text-transform: uppercase
+    color: $dark-form
     text-align: center
     margin: 0
-    margin-bottom: 2.428rem
+    margin-bottom: 30px
+  &__subtitle
+    // font-size: 18px
+    font-size: calc(14px + 4 * (100vw / 1920))
+    line-height: 28px
+    color: $dark-form
   &__form
     display: flex
     flex-direction: column
+    width: 100%
   &__input
     &-group
       display: flex
       flex-direction: column
       position: relative
-      margin-bottom: 3.428rem
+      margin-top: 60px
   &__policy
-    margin-bottom: 2.78rem
+    margin-top: 50px
+    margin-bottom: 50px
     position: relative
   &__button
     // align-self: flex-end
 
 .input
-  font-size: 1.285rem
+  // font-size: 18px
+  font-size: calc(14px + 4 * (100vw / 1920))
   background: transparent
   border: none
   text-align: center
   border-bottom: 1px solid rgba(54, 54, 54, 0.3)
-  color: $dark
+  color: $dark-form
   padding: 0.57rem 0
   &--light
     &::placeholder
-      font-family: 'Futura Medium', 'Arial', sans-serif
-      font-size: 1.285rem
-      line-height: 1.785rem
+      // font-size: 18px
+      font-size: calc(14px + 4 * (100vw / 1920))
+      line-height: 40px
       color: #b5b5b5
 
 .policy 
@@ -83,11 +95,15 @@
     &:checked ~
       .policy__label
         &::before
-          background: $primary url("../img/check.svg") no-repeat center / 0.8rem
+          background: url("../img/checkboxs.svg") no-repeat center / 0.8rem
   &__label
     display: flex
     align-items: center
-    font-size: 1.143rem
+    justify-content: center
+    // font-size: 14px
+    font-size: calc(12px + 2 * (100vw / 1920))
+    line-height: 20px
+    color: #323232
     &::before
       content: ''
       width: 18px
@@ -98,3 +114,19 @@
       margin-right: 0.64rem
     &--center
       justify-content: center
+
+div.invalid
+  color: #d71414
+  // font-size: 14px
+  font-size: calc(12px + 2 * (100vw / 1920))
+  position: absolute
+  left: 0
+  bottom: -20px
+
+input
+  &.invalid
+    border-bottom: 1px solid #d71414
+
+
+div#userCheckbox-error
+  left: 25%
