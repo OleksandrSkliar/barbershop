@@ -208,10 +208,10 @@ $(document).ready(function () {
           minlength: "Некорректно введен номер",
         },
         userDate: {
-          required: "Выберите Дату",
+          required: "Введите Дату",
         },
         userTime: {
-          required: "Выберите Время",
+          required: "Введите Время",
         },
         userCheckbox: {
           required: "Подтвердить обработку",
@@ -239,8 +239,16 @@ $(document).ready(function () {
   validateForm(".modal__form");
 
   // Маска для телефона
-  $("[type=tel]").mask("+380 (00) 000-00-00", {
+  $("[type=tel]").mask("+000 (00) 000-00-00", {
     placeholder: "Телефон",
+  });
+
+  // Маска для даты
+  $("#user-date").mask("00/00/0000", {
+  });
+
+  // Маска для время 
+  $("#user-time").mask("00:00:00", {
   });
 
   // Cкрол вниз
@@ -300,7 +308,7 @@ $(document).ready(function () {
   // Zoom image
   lightbox.option({
     resizeDuration: 300,
-    positionFromTop: 150,
+    positionFromTop: 300,
     wrapAround: true,
     fitImagesInViewport: true,
     showImageNumberLabel: false,

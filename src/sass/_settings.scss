@@ -83,6 +83,7 @@ ul {
 .slider {
   position: relative;
   background-color: $dark;
+  
   &__item {
     transition: all 0.3s ease 0s;
     opacity: 0.2;
