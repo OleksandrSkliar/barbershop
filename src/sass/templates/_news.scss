@@ -52,12 +52,16 @@
   &__popup-sms {
     position: relative;
   }
+
+  &__popup-like {
+    margin-right: 40px;
+  }
 }
 
 .news__wrap-img:hover .news__popup {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 

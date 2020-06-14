@@ -80,13 +80,15 @@ $(document).ready(function () {
   $('.slider').slick({
     centerMode: true,
     slidesToShow: 3,
+    variableWidth: true,
+    infinite: true,
     responsive: [
       {
         breakpoint: 2500,
         settings: {
           centerMode: true,
-          variableWidth: true,
           infinite: true,
+          variableWidth: true,
           slidesToShow: 3
         }
       },
@@ -100,7 +102,7 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 992,
+        breakpoint: 1200,
         settings: {
           centerMode: true,
           variableWidth: false,
@@ -108,21 +110,6 @@ $(document).ready(function () {
           slidesToShow: 3
         }
       },
-      {
-        breakpoint: 768,
-        settings: {
-          centerMode: false,
-          infinite: true,
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          centerMode: false,
-          slidesToShow: 1
-        }
-      }
     ]
   });
 
@@ -166,7 +153,7 @@ $(document).ready(function () {
     var windowTop = $(this).scrollTop();
     if (windowTop > mapTop) {
       $("#map").html(
-        '<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab245e42e0be839d9f2aeab1fe427ef33f365bce1b5ddb8711fb172809e11cf35&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>'
+        '<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab245e42e0be839d9f2aeab1fe427ef33f365bce1b5ddb8711fb172809e11cf35&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>'
         );
       $(window).unbind("scroll");
     }
@@ -239,7 +226,7 @@ $(document).ready(function () {
   validateForm(".modal__form");
 
   // Маска для телефона
-  $("[type=tel]").mask("+000 (00) 000-00-00", {
+  $("[type=tel]").mask("+380 (00) 000-00-00", {
     placeholder: "Телефон",
   });
 
@@ -275,34 +262,6 @@ $(document).ready(function () {
 
   $(".slider__range").on("input change", function () {
     $(".slider").slick("slickGoTo", this.value - 0);
-  });
-
-  $(".slider").slick({
-    slidesToShow: 5,
-    arrows: false,
-    dots: false,
-    adaptiveHeight: true,
-    infinite: true,
-    slidesToScroll: 1,
-    responsive: [{
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 4,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 3,
-      },
-    },
-    {
-      breakpoint: 540,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-    ],
   });
 
   // Zoom image

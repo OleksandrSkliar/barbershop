@@ -96,6 +96,7 @@ ul {
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
+  padding: 0 0;
 }
 /* Лента слайдов */
 .slick-track{
@@ -104,34 +105,35 @@ ul {
 }
 /* Стрелка */
 .slider .slick-arrow{
-  position: absolute;
-  display: block;
-  top: 50%;
-  margin: -14px 0px 0px 0px;
+  top: 0;
   z-index: 10;
   font-size: 0;
-  width: 25px;
-  height: 25px;
   border: 0;
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  transition: 0.3s;
+  opacity: 0.7;
 }
 /* Стрелка влево */
 .slider .slick-arrow.slick-prev{
-  left: 15px;
-  background: url('../img/arrow-light-left.svg') 0 0 / 100% no-repeat;
+  left: 0;
+  background: #333333 url('../img/next-left.png') center no-repeat;
 }
 /* Стрелка вправо */
 .slider .slick-arrow.slick-next{
-  right: 15px;
-  background: url('../img/arrow-light-right.svg') 0 0 / 100% no-repeat;
+  right: 0;
+  background: #333333 url('../img/next-right.png') center no-repeat;
 }
 
 /* Стрелка влево */
-.slider .slick-arrow.slick-prev:hover{
-  background: url('../img/arrow-hover-left.svg') 0 0 / 100% no-repeat;
-}
-/* Стрелка вправо */
-.slider .slick-arrow.slick-next:hover{
-  background: url('../img/arrow-hover-right.svg') 0 0 / 100% no-repeat;
+.slider .slick-arrow.slick-prev:hover,
+.slider .slick-arrow.slick-next:hover {
+  background-color: $primary;
 }
 
 /* Стрелка не активная */
@@ -159,6 +161,10 @@ ul {
   border: none;
   border-radius: 50%;
   background-color: $light;
+}
+
+.slider .slick-list.draggable {
+  padding: 0px 0px !important;
 }
 
 // .slider

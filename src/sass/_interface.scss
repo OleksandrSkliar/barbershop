@@ -3,7 +3,8 @@
   display: inline-block;
   font-weight: 500;
   // font-size: 20px;
-  padding: 20px 72px;
+  font-size: calc(14px + 6 * (100vw / 1920));
+  padding: 15px 71px 14px 72px;
   border-radius: 28px;
   background-color: transparent;
   border: 2px solid $primary;

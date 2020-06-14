@@ -1,7 +1,7 @@
 @media (max-width: 1200px) {
-	.button {
-		padding: 15px 50px;
-	}
+	// .button {
+	// 	padding: 15px 50px;
+	// }
 
 	.menu__link {
 		right: 30%;
@@ -205,16 +205,11 @@
 	}
 
 	.social {
-		top: -15.5px;
 		&__list {
 			&--new {
 				flex-direction: column;
 				align-items: center;
 			}
-		}
-		&__link {
-			width: 30px;
-			height: 30px;
 		}
 
 		&--news {

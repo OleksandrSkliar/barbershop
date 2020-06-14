@@ -1,7 +1,17 @@
 .footer {
 	&__map {
-  filter: brightness(90%);
+  	filter: brightness(80%);
+		-ms-filter: brightness(80%);
+		-webkit-filter: brightness(80%);
+		-moz-filter: brightness(80%);   
+		-o-filter: brightness(80%); 
 	}
+
+	// filter: grayscale(1);
+	// -ms-filter: grayscale(1);
+	// -webkit-filter: grayscale(1);
+	// -moz-filter: grayscale(1);
+	// -o-filter: grayscale(1);
 	&__map-wrap {
 		position: relative;
 	}
@@ -32,11 +42,11 @@
 		}
 	}
 	&__way {
-		text-decoration: underline;
 		color: $primary;
 		margin-bottom: 35px;
 		&:hover {
 			color: $light;
+			text-decoration: underline;
 		}
 		
 	}
@@ -69,6 +79,12 @@
 		color: #808080;
 		&:hover {
 			color: $light;
+		}
+	}
+
+	&__schedule {
+		sup {
+			font-size: 12px;
 		}
 	}
 }
