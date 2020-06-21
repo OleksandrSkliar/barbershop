@@ -1,17 +1,8 @@
 .footer {
 	&__map {
-  	filter: brightness(80%);
-		-ms-filter: brightness(80%);
-		-webkit-filter: brightness(80%);
-		-moz-filter: brightness(80%);   
-		-o-filter: brightness(80%); 
+  	filter: rgb(204,153,102);
 	}
 
-	// filter: grayscale(1);
-	// -ms-filter: grayscale(1);
-	// -webkit-filter: grayscale(1);
-	// -moz-filter: grayscale(1);
-	// -o-filter: grayscale(1);
 	&__map-wrap {
 		position: relative;
 	}

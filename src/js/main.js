@@ -226,7 +226,7 @@ $(document).ready(function () {
   validateForm(".modal__form");
 
   // Маска для телефона
-  $("[type=tel]").mask("+380 (00) 000-00-00", {
+  $("[type=tel]").mask("+7 (000) 000-00-00", {
     placeholder: "Телефон",
   });
 

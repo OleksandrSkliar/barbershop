@@ -17,21 +17,28 @@
 		}
 	}
 
-	.modal {
-		&__dialog {
-			max-width: 30rem;
-	    padding: 70px;
-		}
-
-		&__input {
-			&-group {
-      	margin-top: 40px
-			}
-		}
-
+	.main-screen {
 		&__title {
-			margin-bottom: 20px;
-		}
+	    display: block;
+	    position: relative;
+	    text-transform: uppercase;
+	    // font-size: 90px;
+	    font-weight: 700;
+	    color: $light;
+	    font-size: calc(10px + 80 * (100vw / 1200));
+	  }
+	  &__subtitle-top {
+	    display: block;
+	    // font-size: 50px;
+	    font-size: calc(12px + 38 * (100vw / 1200));
+	  }
+	  &__subtitle-bottom {
+	    display: block;
+	    // font-size: 30px;
+	    text-transform: none;
+	    font-size: calc(10px + 20 * (100vw / 1200));
+	    font-weight: 400;
+	  }
 	}
 }
 
@@ -126,24 +133,90 @@
 
 	.modal {
 		&__dialog {
-			max-width: 27rem;
-	    padding: 60px;
+			max-width: 33rem;
+	  }
+
+	  &__title {
+	  	// font-size: 36px
+	    font-size: calc(15px + 21 * (100vw / 992));
+	  }
+	  &__subtitle {
+	  	// font-size: 18px
+	    font-size: calc(14px + 4 * (100vw / 992));
+	  }
+
+	  &__dialog {
+	    padding: 80px;
 		}
 
 		&__input {
 			&-group {
-      	margin-top: 30px
+      	margin-top: 45px
 			}
 		}
 
 		&__title {
-			margin-bottom: 15px;
+			margin-bottom: 20px;
 		}
 
 		&__policy {
 			margin-top: 40px;
-	    margin-bottom: 40px;
+	    margin-bottom: 0;
 		}
+	}
+
+	.input {
+		// font-size: 18px
+	  font-size: calc(14px + 4 * (100vw / 992));
+	  &--light {
+	  	&::placeholder {
+	  		// font-size: 18px
+	      font-size: calc(14px + 4 * (100vw / 992));
+	  	}
+	  }
+	}
+
+	.policy {
+		&__label {
+	    // font-size: 14px
+	    font-size: calc(12px + 2 * (100vw / 992));
+		}
+	}
+
+	div.invalid {
+	  // font-size: 14px
+	  font-size: calc(12px + 2 * (100vw / 992));
+	}
+
+	.main-screen {
+		&__wrap {
+			padding: 0;
+		}
+		&__border {
+		display: none;
+		}
+	}
+
+	.main-screen {
+		&__content {
+			width: 100%;
+			text-align: center;
+			
+			margin-right: 0;
+		}
+	}
+
+	.button {
+		margin-top: 30px;
+	}
+
+	.header__button {
+		display: none;
+		
+	}
+
+	.button--hidden {
+		display: inline-block;		
 	}
 }
 
@@ -165,20 +238,6 @@
 	    opacity: 0.8;
   	}
 	}
-	
-	.button {
-		padding: 10px 50px;
-		margin-top: 20px;
-	}
-
-	.header__button {
-		display: none;
-		
-	}
-
-	.button--hidden {
-		display: inline-block;		
-	}
 
 	.header__content {
 		justify-content: space-around;
@@ -186,22 +245,6 @@
 
 	.menu__link {
 		right: 5%;
-	}
-
-	.main-screen {
-		flex: 1 0 60%;
-		&__content {
-			width: 100%;
-			text-align: center;
-			
-			margin-right: 0;
-		}
-		&__content-img {
-		display: none;
-		}
-		&__title {
-		
-		}
 	}
 
 	.social {
@@ -249,38 +292,26 @@
 			flex-direction: column;
 			text-align-last: center;
 		}
-
-		&__map {
-			max-height: 450px;
-			&-wrap {
-			height: 450px
-			}
-		}
-
-		.ymaps-2-1-76-map {
-			max-height: 450px;
-		}
 	}
 
 	.modal {
-		// &__dialog {
-		// 	max-width: 27rem;
-	 //    padding: 60px;
-		// }
+		&__dialog {
+	    padding: 70px;
+		}
 
-		// &__input {
-		// 	&-group {
-  //     	margin-top: 30px
-		// 	}
-		// }
+		&__input {
+			&-group {
+      	margin-top: 35px
+			}
+		}
 
-		// &__title {
-		// 	margin-bottom: 15px;
-		// }
+		&__title {
+			margin-bottom: 15px;
+		}
 
 		&__policy {
-			margin-top: 40px;
-	    margin-bottom: 25px;
+			margin-top: 35px;
+	    margin-bottom: 0;
 		}
 	}
 }
@@ -296,23 +327,7 @@
 
 	.modal {
 		&__dialog {
-			max-width: 23rem;
-	    padding: 20px;
-		}
-
-		&__input {
-			&-group {
-      	margin-top: 20px
-			}
-		}
-
-		&__title {
-			margin-bottom: 10px;
-		}
-
-		&__policy {
-			margin-top: 30px;
-	    margin-bottom: 15px;
+	    padding: 28px;
 		}
 
 		&__close {
